@@ -1,0 +1,12 @@
+services:
+  - type: worker
+    name: ytv-downloader-bot
+    env: docker
+    plan: starter
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: MAX_UPLOAD_SIZE_MB
+        value: "50"
+      - key: MAX_PLAYLIST_ITEMS
+        value: "25"
